@@ -1,4 +1,3 @@
-import time
 import streamlit as st
 
 st.title("Hoop Web App")
