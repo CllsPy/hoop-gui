@@ -182,20 +182,17 @@ class DesenhoMecanico:
 
             x, E, label, _ = graph
             plt.plot(x, E, label=label,  marker=marcadores[i], markersize=5)
-            plt.legend(loc='best')
+            plt.legend()
             sns.despine(left=True)
             plt.ylim(tresh_hold)
 
-        plt.show()
 
         if stats == "True":
             for graph in self.graphs:
                 x, E, label = graph
-                sns.kdeplot(x=E, label=label, alpha=.5, fill=True, bw_method=0.1)
-                plt.legend()
+                sns.kdeplot(x=E, label=labels, alpha=.5, fill=True, bw_method=0.1)
                 plt.title("Kernel Density")
                 sns.despine(left=True)
-            plt.show()
 
 
     def hist(self, objH, modelos: list):

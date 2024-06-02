@@ -81,3 +81,5 @@ d.desenha(h1, modelo=Voigt(), direcao='K11', stats='True')
 d.desenha(h1, modelo=Reuss(),  direcao='K11', stats='True')
 d.desenha(h1, modelo=GSC(),  direcao='K11', stats='True')
 d.juntar_grafs(h1, stats='True', direcao='K22', tresh_hold=0.22)
+
+st.pyplot(d.juntar_grafs(h1, stats='True', direcao='K22', tresh_hold=0.22))
